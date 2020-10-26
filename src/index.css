@@ -1,13 +1,61 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html{
+  min-height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  /* background: transparent url(/img/overlapping/4313234.jpg) center center no-repeat padding-box; */
+  /* background: #292929; */
+  background: #ff8500;
+  background-size: 100%;
+  min-height: 100%;
+}
+
+.card-layout{
+  border: none;
+  border-radius: 15px;
+  /* box-shadow: black; */
+}
+.card-layout:hover,
+.card-layout:focus {
+  box-shadow: -5px 20px 18px rgba(0, 0, 0, 0.3) !important;
+  transform: translateY(-0.25em);
+  border-color: black;
+}
+
+
+form{
+  padding: 20px;
+  margin-top: 60px;
+  margin-left: 15%;
+  margin-right: 15%;
+  opacity: 0.89;
+  border: 2px solid black;
+  border-radius: 9px;
+}
+
+form button, form h5 {
+  margin: 20px 0;
+}
+
+form button{
+  /* border: 1px solid black !important; */
+  border-radius: 10px !important;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]){
+  border-color: #ff6f00;
+  box-shadow: none;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label,
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=password]:not(.browser-default):focus:not([readonly]) + label{
+  color: #ff6f00 !important;
 }
