@@ -1,68 +1,30 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Mangement Tool
 
-## Available Scripts
+This app is a Project Management tool with authentication and cloud functionalities where users can create Projects, edit them, delete them, and keep a track of them all in one SPA. To build this I used React, Redux, React-Redux, Thunk, and Firebase.
+This app will have authentication(sign-up & sign-in) and features like Cloud security, Route Guarding, Cloud functions.
+# Tech Stack
+* React
+* Redux
+* React-redux
+* Redux-thunk
+* React-router-dom
+* Materialize-css
+* Firebase
+* React-redux-firebase
+* Redux-firestore
+* Moment.js
+* Cloud Functions
+* Firebase Auth
+* Firebase Security
+* Firebase Hosting
 
-In the project directory, you can run:
+# Build
+This SPA is built using many packages front-end was mostly consists of React, Materialize-CSS and Redux for state-management. But soon there was a requirement of asynchronous behavior, for such condition Redux-Thunk was used to allow asynchronous communication between the React app and the Firebase DB. Redux-Thunk is a middleware that is a function and unlike a regular function, it halts the dispatch just like ES6 Generators. It performs async requests and then resumes the dispatch after getting all the information or sending information. In most cases, external data is grabbed and passed to the reducers. The dates are formatted using Moment.js.
+All the pages are routed using a package called React-router-dom. The connection between React and Redux is made by using a package called React-Redux. 
+Firebase packages like React-redux-firebase & Redux-firestore allows us to connect to the firestore and pull data from firestore and render it.
 
-### `npm start`
+The backend was mostly consists of Firebase - the database is a No-SQL Firestore DB, the server-side code was implemented by using Firebase Cloud Functions and authorisation and authentication of users was controlled by using Firebase Auth.
+The app is secured using Firebase Security rules and it is hosted using Firebase.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+# Future Scope
+This app will have authentication(sign-up & sign-in) and real-time notifications so anything happens like if you delete a project or create a new project or edit notification will be shown in the sidebar in real-time.
