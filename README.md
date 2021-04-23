@@ -33,4 +33,4 @@ The backend was mostly consists of Firebase - the database is a No-SQL Firestore
 The app is secured using Firebase Security rules and it is hosted using Firebase.
 
 # Future Scope
-This app will have authentication(sign-up & sign-in) and real-time notifications so anything happens like if you delete a project or create a new project or edit notification will be shown in the sidebar in real-time.
+This app will have authentication(sign-up & sign-in) and real-time notifications so any activity happens like if you delete a project, create a new project or edit one, then a  notification will pop in the sidebar in real-time.
