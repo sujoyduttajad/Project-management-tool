@@ -12,10 +12,13 @@
 .nav-wrapper {
     @include flex(column, flex-start, flex-start);
     width: fit-content;
-    max-width: 22em;
+    max-width: 12em;
+    width: 100%;
     height: 100vh;
     max-height: fit-content;
     padding: 1rem;
+    background-color: #eee;
+    box-shadow: -5px 20px 18px rgba(0, 0, 0, 0.5);
 }
 
 .container {
@@ -27,5 +30,12 @@
     margin-top: 2em;
     img {
         width: 5em;
+    }
+}
+
+.right {
+    padding: 2em 0;
+    .lab {
+        padding: 5em 0;
     }
 }
