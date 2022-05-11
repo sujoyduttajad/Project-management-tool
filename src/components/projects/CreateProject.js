@@ -22,7 +22,7 @@ class CreateProject extends Component {
     const { auth } = this.props;
     if (!auth.uid) return <Redirect to="/signin" />;
     return (
-      <div className="container">
+      <div className="feed-section">
         <form onSubmit={this.handleSubmit} className="white">
           <h5 className="">Create New Project</h5>
           <div className="input-field">
