@@ -3,23 +3,38 @@ import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { signOut } from "../../store/actions/authActions";
 import { Avatar, Button, capitalize } from "@mui/material";
-import { styled } from '@mui/material/styles';
+import { styled } from "@mui/material/styles";
 import { BiMessageSquareAdd } from "react-icons/bi";
 
 export const SecondaryButton = styled(Button)({
-    fontFamily: "'Noto Sans', sans-serif",
-    fontSize: '1.1em',
-    fontWeight: 600,
-    width: '100%',
-    textTransform: "uppercase",
-    color: '#131E3F',
-    backgroundColor: '#E7ECF8',
-    margin: '0.6em 0',
-    padding: '0.2em 0.7em',
-    "&:hover": {
-        backgroundColor: '#D0D8F1'
-    },
-  });
+  fontFamily: "'Noto Sans', sans-serif",
+  fontSize: "1.1em",
+  fontWeight: 600,
+  width: "100%",
+  textTransform: "uppercase",
+  color: "#131E3F",
+  backgroundColor: "#E7ECF8",
+  margin: "0.6em 0",
+  padding: "0.2em 0.7em",
+  borderColor: "#131E3F",
+  "&:hover": {
+    backgroundColor: "#D0D8F1",
+    borderColor: "#131E3F",
+    boxShadow: '-1px 3px 18px 0px rgba(56,56,56,0.91)',
+  },
+});
+
+export const CustomAvatar = styled(Button)({
+  backgroundColor: "#131E3F",
+  fontFamily: "'Noto Sans', sans-serif",
+  fontSize: "1.1em",
+  padding: "0.3em",
+  color: "#fff",
+  borderRadius: "50%",
+  "&:hover": {
+    backgroundColor: "#5A77CE",
+  },
+});
 
 function SignedInLinks(props) {
   return (
@@ -33,10 +48,13 @@ function SignedInLinks(props) {
       </ul>
       <ul className="right">
         <li className="tab">
-          <Avatar>
-            <NavLink to="/" className="">
-              {props.profile.initials}
-            </NavLink>
+          <Avatar 
+          variant="circular" 
+          sx={{ 
+              bgcolor: '#131E3F',
+
+            }}>
+            <NavLink to="/">{props.profile.initials}</NavLink>
           </Avatar>
         </li>
         <li className="tab">
