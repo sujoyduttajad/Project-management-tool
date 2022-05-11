@@ -13,11 +13,9 @@ class Dashboard extends Component {
     return (
       <section className="feed-section">
         <div className="dashboard-container">
-          <div className="col s12 m6">
-            <ProjectList projects={projects} />
-          </div>
+          <ProjectList projects={projects} />
         </div>
-        <div className="col s12 m5 offset-m1">
+        <div className="">
           <Notifications />
         </div>
       </section>
