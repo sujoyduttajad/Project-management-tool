@@ -1,14 +1,23 @@
+$Gainsboro: #dfdfdf;
+$HRcolor: #505050;
 
-  $Gainsboro: #DFDFDF;
-  $HRcolor: #505050;
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
 
-  @mixin flex($direction, $justify, $align) {
-    display: flex;
-    flex-direction: $direction;
-    align-items: $align;
-    justify-content: $justify;
-  }
-
+.feed-section {
+    @include flex(row, center, center);
+    margin: 0 auto;
+    width: 100vw;
+    // height: 100vh;
+}
 .dashboard-container {
-    @include flex(column, center, center);
+  @include flex(column, center, center);
+  margin: 0 auto;
+  margin-top: 2em;
+  height: 100vh;
+    overflow-y: scroll;
 }
