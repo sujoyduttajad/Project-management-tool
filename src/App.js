@@ -1,4 +1,5 @@
 import React from 'react';
+import "./styles/global.scss";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Dashboard from './components/dashboard/Dashboard';
 import Navbar from './components/layout/Navbar'; 
