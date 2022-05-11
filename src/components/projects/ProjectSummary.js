@@ -5,7 +5,7 @@ import moment from 'moment';
 function ProjectSummary({ project }) {
     return (
         <div>
-            <div className="card z-depth-0 project-summary card-layout">
+            <div className="card z-depth-0 project-summary card-layout hoverable">
                 <div className="card-content grey-text text-darken-3">
                     <span className="card-title">{project.title}</span>
                     <p>Posted by {project.authorFirstName} {project.authorLastName}</p>
