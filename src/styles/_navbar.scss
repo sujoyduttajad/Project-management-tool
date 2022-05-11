@@ -11,12 +11,14 @@
 
 .nav-wrapper {
     @include flex(column, flex-start, flex-start);
-    width: fit-content;
     max-width: 12em;
     width: 100%;
     height: 100vh;
-    max-height: fit-content;
     padding: 1rem;
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    z-index: 100;
     background-color: #eee;
     box-shadow: -5px 20px 18px rgba(0, 0, 0, 0.5);
 }
@@ -34,7 +36,10 @@
 }
 
 .right {
-    padding: 2em 0;
+    padding: 1em 0;
+    li {
+        margin: 2em 0;
+    }
     .lab {
         padding: 5em 0;
     }
