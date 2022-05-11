@@ -13,7 +13,7 @@ function ProjectDetails(props) {
 
     if(project) {
         return (
-            <div className="container">
+            <div className="feed-section">
                 <div className="card">
                     <div className="card-content">
                         <span className="card-title">{ project.title }</span>
