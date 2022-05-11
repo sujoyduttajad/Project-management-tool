@@ -9,15 +9,14 @@ $HRcolor: #505050;
 }
 
 .feed-section {
-    @include flex(row, center, center);
-    margin: 0 auto;
-    width: 100vw;
-    // height: 100vh;
+  @include flex(row, center, center);
+  margin: 0 auto;
+  width: 60vw;
 }
 .dashboard-container {
   @include flex(column, center, center);
   margin: 0 auto;
   margin-top: 2em;
-  height: 100vh;
-    overflow-y: scroll;
+  height: 100%;
+  overflow-y: scroll;
 }
