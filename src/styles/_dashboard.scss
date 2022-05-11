@@ -1,0 +1,14 @@
+
+  $Gainsboro: #DFDFDF;
+  $HRcolor: #505050;
+
+  @mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+  }
+
+.dashboard-container {
+    @include flex(column, center, center);
+}
