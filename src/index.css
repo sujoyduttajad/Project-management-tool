@@ -24,8 +24,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background: #ff8500;
+  font-family: 'Noto Sans', sans-serif;
+  background: #eee;
   background-size: 100%;
   min-height: 100%;
 }
