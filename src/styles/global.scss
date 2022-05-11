@@ -25,17 +25,7 @@ a {
 li {
     list-style: none;
 }
-.card-layout {
-    border: none;
-    border-radius: 15px;
-    box-shadow: -5px 20px 18px rgba(0, 0, 0, 0.3);
-  }
-  .card-layout:hover,
-  .card-layout:focus {
-    box-shadow: -5px 20px 18px rgba(0, 0, 0, 0.3);
-    transform: translateY(-0.25em);
-    border-color: black;
-  }
+
   
   form {
     padding: 20px;
