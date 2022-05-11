@@ -2,14 +2,17 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { signOut } from "../../store/actions/authActions";
+import { Button } from "@mui/material";
 
 function SignedInLinks(props) {
   return (
     <ul className="right">
-      <li className="tab btn grey lighten-5 text darken-4 col s1 m4">
-        <NavLink to="/create">New Project</NavLink>
+      <li className="tab">
+        <Button variant="contained">
+          <NavLink to="/create">New Project</NavLink>
+        </Button>
       </li>
-      <li className="tab btn grey lighten-5 text darken-4 col s1">
+      <li className="tab">
         <a onClick={props.signOut}>Log Out</a>
       </li>
       <li>
