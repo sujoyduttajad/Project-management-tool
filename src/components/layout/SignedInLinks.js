@@ -2,8 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { signOut } from "../../store/actions/authActions";
-import { Button } from "@mui/material";
-import {BiMessageSquareAdd} from 'react-icons/bi'
+import { Avatar, Button } from "@mui/material";
+import { BiMessageSquareAdd } from "react-icons/bi";
 
 function SignedInLinks(props) {
   return (
@@ -13,16 +13,18 @@ function SignedInLinks(props) {
           <NavLink to="/create">New Project</NavLink>
         </Button>
       </li>
+     
       <li className="tab">
-        <a onClick={props.signOut}>Log Out</a>
+        <Avatar>
+          <NavLink to="/" className="">
+            {props.profile.initials}
+          </NavLink>
+        </Avatar>
       </li>
       <li className="tab">
-        <NavLink
-          to="/"
-          className="btn btn-floating grey lighten-5 text darken-4"
-        >
-          {props.profile.initials}
-        </NavLink>
+        <Button>
+          <a onClick={props.signOut}>Log Out</a>
+        </Button>
       </li>
     </ul>
   );
