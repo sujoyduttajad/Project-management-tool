@@ -1,7 +1,9 @@
 # Project Mangement Tool
 
-This app is a Project Management tool with authentication and cloud functionalities where users can create Projects, edit them, delete them, and keep a track of them all in one SPA. To build this I used React, Redux, React-Redux, Thunk, and Firebase.
-This app will have authentication(sign-up & sign-in) and features like Cloud security, Route Guarding, Cloud functions.
+The goal of this app to was to create a Project Management Tool for teams so that they can share, create, delete, and update projects across an organization or multiple organization. With authentication and cloud functionalities providing more robust and standard features to the users to manage and keep a track of all their requirements all in one app. 
+
+To build this I used React, Redux, React-Redux, Thunk, and Firebase.
+This app consists of authentication and authorisation from Firebase and additional features like Cloud security, Route Guarding, Cloud functions.
 
 [Click here to see the live demo](https://project-manager-7accb.web.app/)
 
@@ -25,7 +27,7 @@ This app will have authentication(sign-up & sign-in) and features like Cloud sec
 * Firebase Hosting
 
 # Build
-This SPA is built using a bunch of packages, front-end is mostly consists of React, Materialize-CSS and Redux for state-management. But soon there was a requirement of asynchronous behavior, for such condition Redux-Thunk was used to allow asynchronous communication between the React app and the Firebase DB. Redux-Thunk is a middleware that is a function and unlike a regular function, it halts the dispatch just like ES6 Generators. It performs async requests and then resumes the dispatch after getting all the information or sending information. In most cases, external data is grabbed and passed to the reducers. The dates are formatted using Moment.js.
+This app is built using a bunch of packages, front-end is mostly consists of React, Materialize-CSS and Redux for state-management. But soon there was a requirement of asynchronous behavior, for such condition Redux-Thunk was used to allow asynchronous communication between the React app and the Firebase DB. Redux-Thunk is a middleware that is a function and unlike a regular function, it halts the dispatch just like ES6 Generators. It performs async requests and then resumes the dispatch after getting all the information or sending information. In most cases, external data is grabbed and passed to the reducers. The dates are formatted using Moment.js.
 All the pages are routed using a package called React-router-dom. The connection between React and Redux is made by using a package called React-Redux. 
 Firebase packages like React-redux-firebase & Redux-firestore allows us to connect to the firestore and pull data from firestore and render it.
 
