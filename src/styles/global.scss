@@ -15,6 +15,15 @@
 .App {
     @include flex(row, flex-start, flex-start);
 }
+ul {
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
 .card-layout {
     border: none;
     border-radius: 15px;
