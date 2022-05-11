@@ -14,7 +14,7 @@ function ProjectDetails(props) {
     if(project) {
         return (
             <div className="feed-section">
-                <div className="card">
+                <div className="card-layout">
                     <div className="card-content">
                         <span className="card-title">{ project.title }</span>
                         <p>{ project.content }</p>
