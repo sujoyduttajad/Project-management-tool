@@ -13,13 +13,13 @@ function ProjectDetails(props) {
 
     if(project) {
         return (
-            <div className="container section project-details">
-                <div className="card z-depth-0">
+            <div className="container">
+                <div className="card">
                     <div className="card-content">
                         <span className="card-title">{ project.title }</span>
                         <p>{ project.content }</p>
                     </div>
-                    <div className="card-action grey lighten-4 grey-text">
+                    <div className="card-action">
                         <div>Posted by { project.authorFirstName } { project.authorLastName }</div>
                         <div>{moment(project.createdAt.toDate()).calendar()}</div>
                     </div>
@@ -29,7 +29,7 @@ function ProjectDetails(props) {
       
     }else {
         return (
-            <div className="container center">
+            <div className="container">
                 <p>Loading project...</p>
             </div>
             )
