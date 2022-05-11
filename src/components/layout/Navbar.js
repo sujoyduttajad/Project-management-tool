@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import SignedInLinks from "./SignedInLinks";
 import SignedOutLinks from "./SignedOutLinks";
 import { connect } from "react-redux";
+import collab from "../../images/collab.svg";
 
 function Navbar(props) {
-    
   const { auth, profile } = props;
   const links = auth.uid ? (
     <SignedInLinks profile={profile} />
@@ -16,9 +16,11 @@ function Navbar(props) {
   return (
     <nav className="nav-wrapper">
       <div className="container">
-        <Link to="/" className="brand-logo">
-          Project Manager
-        </Link>
+        <div className="brand-logo">
+          <Link to="/" >
+            <img src={collab} alt="Brand-logo" />
+          </Link>
+        </div>
         {links}
       </div>
     </nav>
