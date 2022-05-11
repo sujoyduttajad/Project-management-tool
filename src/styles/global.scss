@@ -1,0 +1,46 @@
+
+@import "./dashboard";
+@import "./navbar";
+@import "./signUp";
+@import "./signIn";
+@import "./projectSummary";
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+  }
+
+.App {
+    @include flex(row, flex-start, flex-start);
+}
+.card-layout {
+    border: none;
+    border-radius: 15px;
+  }
+  .card-layout:hover,
+  .card-layout:focus {
+    box-shadow: -5px 20px 18px rgba(0, 0, 0, 0.3) !important;
+    transform: translateY(-0.25em);
+    border-color: black;
+  }
+  
+  form {
+    padding: 20px;
+    margin-top: 60px;
+    margin-left: 15%;
+    margin-right: 15%;
+    opacity: 0.89;
+    border: 2px solid black;
+    border-radius: 9px;
+  }
+  
+  form button,
+  form h5 {
+    margin: 20px 0;
+  }
+  
+  form button {
+    border-radius: 10px !important;
+  }
