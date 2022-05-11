@@ -1,22 +1,38 @@
-html{
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,500&display=swap");
+
+/* ####### Custom scroll bar settings ####### */
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(155, 155, 155, 0.5) transparent !important;
+}
+*::-webkit-scrollbar {
+  width: 0px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+  border: transparent;
+}
+
+html {
   min-height: 100%;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  /* background: transparent url(/img/overlapping/4313234.jpg) center center no-repeat padding-box; */
-  /* background: #292929; */
   background: #ff8500;
   background-size: 100%;
   min-height: 100%;
 }
 
-.card-layout{
+.card-layout {
   border: none;
   border-radius: 15px;
-  /* box-shadow: black; */
 }
 .card-layout:hover,
 .card-layout:focus {
@@ -25,8 +41,7 @@ body{
   border-color: black;
 }
 
-
-form{
+form {
   padding: 20px;
   margin-top: 60px;
   margin-left: 15%;
@@ -36,26 +51,26 @@ form{
   border-radius: 9px;
 }
 
-form button, form h5 {
+form button,
+form h5 {
   margin: 20px 0;
 }
 
-form button{
-  /* border: 1px solid black !important; */
+form button {
   border-radius: 10px !important;
 }
 
-input[type=text]:not(.browser-default):focus:not([readonly]),
-input[type=email]:not(.browser-default):focus:not([readonly]),
-input[type=password]:not(.browser-default):focus:not([readonly]),
-textarea.materialize-textarea:focus:not([readonly]){
+input[type="text"]:not(.browser-default):focus:not([readonly]),
+input[type="email"]:not(.browser-default):focus:not([readonly]),
+input[type="password"]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
   border-color: #ff6f00;
   box-shadow: none;
 }
 
-input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+input[type="text"]:not(.browser-default):focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label,
-input[type=email]:not(.browser-default):focus:not([readonly]) + label,
-input[type=password]:not(.browser-default):focus:not([readonly]) + label{
+input[type="email"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="password"]:not(.browser-default):focus:not([readonly]) + label {
   color: #ff6f00 !important;
 }
