@@ -48,7 +48,7 @@ export const StyledChip = styled(Chip)({
   color: "#131E3F",
   backgroundColor: "#E7ECF8",
   margin: "0.6em 0",
-  padding: "1.1em 0.01em",
+  padding: "1.15em 0",
   borderColor: "#131E3F",
   borderRadius: '20px',
   "& .MuiChip-avatar": {
@@ -58,11 +58,9 @@ export const StyledChip = styled(Chip)({
     color: '#c2c2c2',
   },
   "& .MuiChip-clickable .MuiChip-clickableColorDefault ": {
-    
       backgroundColor: "#D0D8F1",
       borderColor: "#131E3F",
       boxShadow: "-1px 3px 8px 0px rgba(56,56,56,0.91)",
-    
   },
   "&:hover": {
     backgroundColor: "#D0D8F1",
