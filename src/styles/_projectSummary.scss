@@ -31,7 +31,10 @@
 }
 
 .project-detail {
-  @include flex(row, center, flex-start);
+  @include flex(column, center, flex-start);
   width: 100%;
   margin-top: 5em;
+  .project-header {
+    font-size: 2.5em;
+  }
 }
