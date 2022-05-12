@@ -2,7 +2,6 @@ import React from "react";
 import moment from "moment";
 import { Card, CardActions, CardContent, Typography, Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
-// import { SecondaryButton } from "../layout/SignedInLinks";
 
 export const CustomCard = styled(Card)({
     fontFamily: "'Noto Sans', sans-serif",
@@ -36,7 +35,7 @@ export const ExpandButton = styled(Button)({
 });
 
 function ProjectSummary({ project }) {
-  console.log(project);
+
   return (
     <div className="card-layout">
       <CustomCard>
