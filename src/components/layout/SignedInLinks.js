@@ -20,8 +20,25 @@ export const SecondaryButton = styled(Button)({
   "&:hover": {
     backgroundColor: "#D0D8F1",
     borderColor: "#131E3F",
-    boxShadow: "-1px 3px 18px 0px rgba(56,56,56,0.91)",
+    boxShadow: "-1px 3px 8px 0px rgba(56,56,56,0.91)",
   },
+});
+
+export const StyledChip = styled(Chip)({
+  fontFamily: "'Noto Sans', sans-serif",
+  fontSize: "1.1em",
+  fontWeight: 300,
+  width: "100%",
+  color: "#131E3F",
+  backgroundColor: "#E7ECF8",
+  margin: "0.6em 0",
+  padding: "0.2em 0.05em",
+  borderColor: "#131E3F",
+  // "&:hover": {
+  //   backgroundColor: "#D0D8F1",
+  //   borderColor: "#131E3F",
+  //   boxShadow: "-1px 3px 18px 0px rgba(56,56,56,0.91)",
+  // },
 });
 
 function SignedInLinks(props) {
@@ -38,7 +55,7 @@ function SignedInLinks(props) {
       <ul className="right">
         <li className="tab">
           <NavLink to="/">
-            <Chip
+            <StyledChip
               variant="outlined"
               size="5em"
               clickable
@@ -52,7 +69,7 @@ function SignedInLinks(props) {
                   {props.profile.initials}
                 </Avatar>
               }
-              label={<h4>Hi! {props.profile.firstName}</h4>}
+              label={<h4 className="avatar-h4">Hi! {props.profile.firstName}</h4>}
             />
           </NavLink>
         </li>
