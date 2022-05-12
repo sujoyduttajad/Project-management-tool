@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { signOut } from "../../store/actions/authActions";
-import { Avatar, Button, capitalize } from "@mui/material";
+import { Avatar, Button, Chip } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { BiMessageSquareAdd } from "react-icons/bi";
 
@@ -20,23 +20,12 @@ export const SecondaryButton = styled(Button)({
   "&:hover": {
     backgroundColor: "#D0D8F1",
     borderColor: "#131E3F",
-    boxShadow: '-1px 3px 18px 0px rgba(56,56,56,0.91)',
-  },
-});
-
-export const CustomAvatar = styled(Button)({
-  backgroundColor: "#131E3F",
-  fontFamily: "'Noto Sans', sans-serif",
-  fontSize: "1.1em",
-  padding: "0.3em",
-  color: "#fff",
-  borderRadius: "50%",
-  "&:hover": {
-    backgroundColor: "#5A77CE",
+    boxShadow: "-1px 3px 18px 0px rgba(56,56,56,0.91)",
   },
 });
 
 function SignedInLinks(props) {
+  console.log(props.profile);
   return (
     <div className="sidebar-column">
       <ul className="right">
@@ -48,14 +37,21 @@ function SignedInLinks(props) {
       </ul>
       <ul className="right">
         <li className="tab">
-          <Avatar 
-          variant="circular" 
-          sx={{ 
-              bgcolor: '#131E3F',
-
-            }}>
-            <NavLink to="/">{props.profile.initials}</NavLink>
-          </Avatar>
+          <Chip
+            variant="outlined"
+            size="5em"
+            avatar={
+              <Avatar
+                variant="circular"
+                sx={{
+                  bgcolor: "#131E3F",
+                }}
+              >
+                <NavLink to="/">{props.profile.initials}</NavLink>
+              </Avatar>
+            }
+            label={<h4>Hi! {props.profile.firstName}</h4>}
+          />
         </li>
         <li className="tab">
           <SecondaryButton variant="outlined">
