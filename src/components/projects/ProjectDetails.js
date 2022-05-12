@@ -17,16 +17,26 @@ function ProjectDetails(props) {
     return (
       <div className="feed-section">
         <div className="project-detail">
+            <h1 className="project-header">Project Detail</h1>
           <CustomCard>
             <CardContent>
-              <CustomTypo sx={{ fontSize: "2em" }} variant="h4" gutterBottom>
+              <CustomTypo
+                sx={{ fontSize: "1.6em", marginBottom: "1em", fontWeight: 700 }}
+                variant="h4"
+                gutterBottom
+              >
                 {project.title}
               </CustomTypo>
-              <CustomTypo variant="body1" gutterBottom>
+              <CustomTypo
+                sx={{ fontSize: "1.1em", marginBottom: "1em" }}
+                variant="body1"
+              >
+                {project.content}
+              </CustomTypo>
+              <CustomTypo variant="body1" gutterBottom sx={{ fontWeight: 600 }}>
                 Posted by {project.authorFirstName} {project.authorLastName}
               </CustomTypo>
-              <CustomTypo variant="body2" gutterBottom>{auth.email}</CustomTypo>
-              <CustomTypo variant="body2">
+              <CustomTypo variant="body2" sx={{ color: "#A1A2A3" }}>
                 {moment(project.createdAt.toDate()).calendar()}
               </CustomTypo>
             </CardContent>
