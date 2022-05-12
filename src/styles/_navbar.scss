@@ -40,13 +40,14 @@
 }
 
 .right {
-    padding: 1em 0;
+    @include flex(column, flex-start, flex-start);
+    height: fit-content;
+    width: 100%;
     li {
         margin: 2em 0;
     }
     .tab {
         margin: 0;
-        // padding: 5em 0;
     }
 }
 
