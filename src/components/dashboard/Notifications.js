@@ -11,12 +11,10 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 });
 
 export const NotifyBar = styled(MuiAlert)({
- 
     fontFamily: "'Noto Sans', sans-serif",
     fontSize: "1em",
     color: "#E7ECF8",
     backgroundColor: "#131E3F",
-  
 });
 
 function Notifications(props) {
