@@ -37,21 +37,24 @@ function SignedInLinks(props) {
       </ul>
       <ul className="right">
         <li className="tab">
-          <Chip
-            variant="outlined"
-            size="5em"
-            avatar={
-              <Avatar
-                variant="circular"
-                sx={{
-                  bgcolor: "#131E3F",
-                }}
-              >
-                <NavLink to="/">{props.profile.initials}</NavLink>
-              </Avatar>
-            }
-            label={<h4>Hi! {props.profile.firstName}</h4>}
-          />
+          <NavLink to="/">
+            <Chip
+              variant="outlined"
+              size="5em"
+              clickable
+              avatar={
+                <Avatar
+                  variant="circular"
+                  sx={{
+                    bgcolor: "#131E3F",
+                  }}
+                >
+                  {props.profile.initials}
+                </Avatar>
+              }
+              label={<h4>Hi! {props.profile.firstName}</h4>}
+            />
+          </NavLink>
         </li>
         <li className="tab">
           <SecondaryButton variant="outlined">
