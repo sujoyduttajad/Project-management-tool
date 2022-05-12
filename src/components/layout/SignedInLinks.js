@@ -6,9 +6,25 @@ import { Avatar, Button, Chip } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { BiMessageSquareAdd } from "react-icons/bi";
 
-export const SecondaryButton = styled(Button)({
+export const PrimaryButton = styled(Button)({
   fontFamily: "'Noto Sans', sans-serif",
   fontSize: "1.1em",
+  fontWeight: 400,
+  width: "100%",
+  textTransform: "capitalize",
+  color: "#E7ECF8",
+  backgroundColor: "#131E3F",
+  margin: "0.6em 0",
+  padding: "0.2em 0.7em",
+  "&:hover": {
+    backgroundColor: "#131E3F",
+    boxShadow: "-1px 3px 8px 0px rgba(56,56,56,0.91)",
+  },
+});
+
+export const SecondaryButton = styled(Button)({
+  fontFamily: "'Noto Sans', sans-serif",
+  fontSize: "1sem",
   fontWeight: 600,
   width: "100%",
   textTransform: "uppercase",
@@ -32,13 +48,27 @@ export const StyledChip = styled(Chip)({
   color: "#131E3F",
   backgroundColor: "#E7ECF8",
   margin: "0.6em 0",
-  padding: "0.2em 0.05em",
+  padding: "1.1em 0.01em",
   borderColor: "#131E3F",
-  // "&:hover": {
-  //   backgroundColor: "#D0D8F1",
-  //   borderColor: "#131E3F",
-  //   boxShadow: "-1px 3px 18px 0px rgba(56,56,56,0.91)",
-  // },
+  borderRadius: '20px',
+  "& .MuiChip-avatar": {
+    width: '35px',
+    height: "35px",
+    fontSize: '1em',
+    color: '#c2c2c2',
+  },
+  "& .MuiChip-clickable .MuiChip-clickableColorDefault ": {
+    
+      backgroundColor: "#D0D8F1",
+      borderColor: "#131E3F",
+      boxShadow: "-1px 3px 8px 0px rgba(56,56,56,0.91)",
+    
+  },
+  "&:hover": {
+    backgroundColor: "#D0D8F1",
+    borderColor: "#131E3F",
+    boxShadow: "-1px 3px 8px 0px rgba(56,56,56,0.91)",
+  },
 });
 
 function SignedInLinks(props) {
@@ -47,9 +77,9 @@ function SignedInLinks(props) {
     <div className="sidebar-column">
       <ul className="right">
         <li>
-          <Button variant="contained" startIcon={<BiMessageSquareAdd />}>
+          <PrimaryButton variant="contained" startIcon={<BiMessageSquareAdd />}>
             <NavLink to="/create">New Project</NavLink>
-          </Button>
+          </PrimaryButton>
         </li>
       </ul>
       <ul className="right">
@@ -57,7 +87,6 @@ function SignedInLinks(props) {
           <NavLink to="/">
             <StyledChip
               variant="outlined"
-              size="5em"
               clickable
               avatar={
                 <Avatar
@@ -74,7 +103,7 @@ function SignedInLinks(props) {
           </NavLink>
         </li>
         <li className="tab">
-          <SecondaryButton variant="outlined">
+          <SecondaryButton variant="outlined" style={{ width: '11em'}}>
             <a onClick={props.signOut}>Log Out</a>
           </SecondaryButton>
         </li>
