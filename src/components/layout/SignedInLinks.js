@@ -72,7 +72,7 @@ export const StyledChip = styled(Chip)({
 });
 
 function SignedInLinks(props) {
-  console.log(props.profile);
+  
   return (
     <div className="sidebar-column">
       <ul className="right">
