@@ -1,14 +1,27 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { PrimaryButton, SecondaryButton } from "./SignedInLinks";
 
 
 function SignedOutLinks() {
-    return (
-        <ul className="right">
-            <li><NavLink to="/signup">Sign Up</NavLink></li>
-            <li><NavLink to="/signin">Login</NavLink></li>
-        </ul>
-    )
+
+
+  return (
+    <div className="sidebar-column">
+      <ul className="right">
+        <li className="tab">
+          <PrimaryButton variant="outlined" >
+            <NavLink to="/signup">Sign Up</NavLink>
+          </PrimaryButton>
+        </li>
+        <li className="tab">
+          <SecondaryButton variant="outlined" style={{ width: "11em" }}>
+            <NavLink to="/signin">Login</NavLink>
+          </SecondaryButton>
+        </li>
+      </ul>
+    </div>
+  );
 }
 
 export default SignedOutLinks;
