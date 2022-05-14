@@ -16,6 +16,7 @@
   @include flex(row, flex-start, flex-start);
   width: 100vw;
   height: 100vh;
+  overflow-y: scroll;
 }
 ul {
   padding: 0;
@@ -31,6 +32,6 @@ li {
 .feed-section {
   @include flex(row, center, center);
   margin: 0 auto;
-  height: 100vh;
+  // height: 100vh;
   width: 60vw;
 }
