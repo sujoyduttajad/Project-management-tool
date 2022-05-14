@@ -10,6 +10,7 @@
 .left-side {
     width: 50%;
     height: 100%;
+    border-radius: 40px 0 0 40px;
     background-color: variables.$primaryColor;
 }
 .right-side {
@@ -31,7 +32,7 @@ form {
   @include flex(column, flex-start, flex-start);
   width: 80%;
   padding: 1em 0;
-  margin: 2em 0;
+  margin: 2em 0 0 0;
   margin-top: 1.4em;
 }
 .input-field {
@@ -48,7 +49,7 @@ form {
     width: 95%;
     border: none;
     outline: none;
-    background-color: #eee;
+    background-color: variables.$secondaryColor;
     border-radius: variables.$borderRadius;
     font-family: inherit;
     font-size: 0.9em;
@@ -60,6 +61,11 @@ form {
   }
 }
 
+.auth-nav-link {
+    color: variables.$primaryColor;
+    text-decoration: underline;
+    padding-left: 0.5em;
+}
 .auth-button {
   display: inline-flex;
   -webkit-box-align: center;
@@ -92,3 +98,9 @@ form {
     box-shadow: -1px 3px 8px 0px rgba(56, 56, 56, 0.91);
   }
 }
+
+.red-warning {
+    padding: 0.3em;
+    color: variables.$warning;
+    font-weight: 500;
+  }
