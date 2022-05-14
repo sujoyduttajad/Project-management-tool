@@ -30,11 +30,20 @@
 }
 
 .brand-logo {
-    @include flex(column, flex-start, flex-start);
+    @include flex(row, center, center);
     margin-top: 2em;
-    img {
-        width: 7em;
-    }
+    .home-link {
+        @include flex(row, space-evenly, center);
+        &:hover {
+            filter: drop-shadow(2px 4px 4px #A0A0A0);
+        }
+        img {
+            width: 7em;
+        }
+        .logo {
+            width: 30%;
+        }
+    }   
 }
 
 .right {
