@@ -29,22 +29,8 @@ li {
     list-style: none;
 }
 
-  
-  // form {
-  //   padding: 20px;
-  //   margin-top: 60px;
-  //   margin-left: 15%;
-  //   margin-right: 15%;
-  //   opacity: 0.89;
-  //   border: 2px solid black;
-  //   border-radius: 9px;
-  // }
-  
-  // form button,
-  // form h5 {
-  //   margin: 20px 0;
-  // }
-  
-  // form button {
-  //   border-radius: 10px;
-  // }
+.feed-section {
+  @include flex(row, center, center);
+  margin: 0 auto;
+  width: 60vw;
+}  
