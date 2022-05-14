@@ -1,4 +1,3 @@
-
 @import "./dashboard";
 @import "./notification";
 @import "./navbar";
@@ -7,30 +6,31 @@
 @import "./projectSummary";
 
 @mixin flex($direction, $justify, $align) {
-    display: flex;
-    flex-direction: $direction;
-    align-items: $align;
-    justify-content: $justify;
-  }
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
 
 .App {
-    @include flex(row, flex-start, flex-start);
-    width: 100vw;
-    height: 100vh;
+  @include flex(row, flex-start, flex-start);
+  width: 100vw;
+  height: 100vh;
 }
 ul {
-    padding: 0;
+  padding: 0;
 }
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .feed-section {
   @include flex(row, center, center);
   margin: 0 auto;
+  height: 100vh;
   width: 60vw;
-}  
+}
