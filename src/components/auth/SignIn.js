@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { signIn } from "../../store/actions/authActions";
 import { Redirect } from "react-router-dom";
-import { CustomCard } from "../projects/ProjectSummary";
+import { CustomCard, CustomTypo } from "../projects/ProjectSummary";
 import { CardContent } from "@mui/material";
 
 class SignIn extends Component {
@@ -25,26 +25,33 @@ class SignIn extends Component {
 
     return (
       <div className="feed-section">
-        <CustomCard style={{ justifyContent: 'center'}}>
+        <CustomCard
+          style={{ marginTop: "30vh", height: "20em", width: "50vh" }}
+        >
           <CardContent>
-            <form onSubmit={this.handleSubmit} className="white">
-              <h5 className="grey-text text-darken-3">Sign In</h5>
-              <div className="input-field">
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" onChange={this.handleChange} />
-              </div>
-              <div className="input-field">
-                <label htmlFor="password">Password</label>
-                <input
-                  type="password"
-                  id="password"
-                  onChange={this.handleChange}
-                />
-              </div>
-              <div className="input-field">
-                <button className="btn-large waves-effect waves-light amber darken-4 z-depth-0">
-                  Login
-                </button>
+            <form onSubmit={this.handleSubmit} className="">
+              <CustomTypo
+                sx={{ fontSize: "2em", fontWeight: 600, color: "#131E3F" }}
+                variant="h4"
+              >
+                Login
+              </CustomTypo>
+              <div className="input-container">
+                <div className="input-field">
+                  <label htmlFor="email">Email</label>
+                  <input type="email" id="email" onChange={this.handleChange} />
+                </div>
+                <div className="input-field">
+                  <label htmlFor="password">Password</label>
+                  <input
+                    type="password"
+                    id="password"
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div className="input-field">
+                  <button className="">Login</button>
+                </div>
               </div>
               <div className="red-text center">
                 {authError ? <p>{authError}</p> : null}
