@@ -5,6 +5,8 @@ import { signOut } from "../../store/actions/authActions";
 import { Avatar, Button, Chip } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { BiMessageSquareAdd } from "react-icons/bi";
+import { Link } from "react-router-dom";
+import collab from "../../images/collab.svg";
 
 export const PrimaryButton = styled(Button)({
   fontFamily: "'Noto Sans', sans-serif",
@@ -76,43 +78,55 @@ export const StyledChip = styled(Chip)({
 
 function SignedInLinks(props) {
   return (
-    <div className="sidebar-column">
-      <ul className="right">
-        <li>
-          <PrimaryButton variant="contained" startIcon={<BiMessageSquareAdd />}>
-            <NavLink to="/create">New Project</NavLink>
-          </PrimaryButton>
-        </li>
-      </ul>
-      <ul className="right">
-        <li className="tab">
-          <NavLink to="/">
-            <StyledChip
-              variant="outlined"
-              clickable
-              avatar={
-                <Avatar
-                  variant="circular"
-                  sx={{
-                    bgcolor: "#131E3F",
-                  }}
-                >
-                  {props.profile.initials}
-                </Avatar>
-              }
-              label={
-                <h4 className="avatar-h4">Hi! {props.profile.firstName}</h4>
-              }
-            />
-          </NavLink>
-        </li>
-        <li className="tab">
-          <SecondaryButton variant="outlined" style={{ width: "11em" }}>
-            <a onClick={props.signOut}>Log Out</a>
-          </SecondaryButton>
-        </li>
-      </ul>
-    </div>
+    <nav className="nav-wrapper">
+      <div className="container">
+        <div className="brand-logo">
+          <Link to="/">
+            <img src={collab} alt="Brand-logo" />
+          </Link>
+        </div>
+        <div className="sidebar-column">
+          <ul className="right">
+            <li>
+              <PrimaryButton
+                variant="contained"
+                startIcon={<BiMessageSquareAdd />}
+              >
+                <NavLink to="/create">New Project</NavLink>
+              </PrimaryButton>
+            </li>
+          </ul>
+          <ul className="right">
+            <li className="tab">
+              <NavLink to="/">
+                <StyledChip
+                  variant="outlined"
+                  clickable
+                  avatar={
+                    <Avatar
+                      variant="circular"
+                      sx={{
+                        bgcolor: "#131E3F",
+                      }}
+                    >
+                      {props.profile.initials}
+                    </Avatar>
+                  }
+                  label={
+                    <h4 className="avatar-h4">Hi! {props.profile.firstName}</h4>
+                  }
+                />
+              </NavLink>
+            </li>
+            <li className="tab">
+              <SecondaryButton variant="outlined" style={{ width: "11em" }}>
+                <a onClick={props.signOut}>Log Out</a>
+              </SecondaryButton>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 }
 
