@@ -1,0 +1,21 @@
+@use "./variables/variables";
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+
+.left-side-signup {
+    @include flex(column, center, center);
+    width: 50%;
+    height: 100%;
+}
+.right-side-signup {
+    width: 50%;
+    height: 100%;
+    border-radius: 0px 40px 40px 0px;
+    background-color: variables.$primaryColor;
+}
