@@ -45,7 +45,7 @@ class SignIn extends Component {
             Hello Again!
           </CustomTypo>
           <CustomTypo
-            sx={{ fontWeight: 500, color: "#C0C0C0" }}
+            sx={{ fontWeight: 500, color: "#7A7A7A" }}
             variant="body1"
           >
             Please login with your credentials
@@ -82,6 +82,14 @@ class SignIn extends Component {
                       id="password"
                       onChange={this.handleChange}
                     />
+                    <CustomTypo 
+                        variant="body2"
+                        sx={{ color: "#131E3F" }}
+                    >
+                        <NavLink to="/signup" >
+                            Forgot Password?
+                        </NavLink>
+                    </CustomTypo>
                   </div>
                   <div className="input-field">
                     <button className="auth-button">Login</button>
@@ -96,7 +104,7 @@ class SignIn extends Component {
             </CardContent>
           </CustomCard>
           <CustomTypo
-            sx={{ fontWeight: 400, color: "#C0C0C0" }}
+            sx={{ fontWeight: 400, color: "#7A7A7A" }}
             variant="body2"
           >
             If you don't have an account, please
