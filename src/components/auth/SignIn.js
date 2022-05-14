@@ -4,7 +4,8 @@ import { signIn } from "../../store/actions/authActions";
 import { Redirect } from "react-router-dom";
 import { CustomCard, CustomTypo } from "../projects/ProjectSummary";
 import { CardContent } from "@mui/material";
-import { SecondaryButton } from "../layout/SignedInLinks";
+import { Link } from "react-router-dom";
+import collab from "../../images/collab.svg";
 
 class SignIn extends Component {
   state = {
@@ -25,42 +26,59 @@ class SignIn extends Component {
     if (auth.uid) return <Redirect to="/" />;
 
     return (
-      <div className="feed-section">
-        <CustomCard style={{ height: "fit-content", width: "50vh" }}>
-          <CardContent>
-            <form onSubmit={this.handleSubmit}>
-              <CustomTypo
-                sx={{ fontSize: "2.5em", fontWeight: 600, color: "#131E3F" }}
-                variant="h4"
-              >
-                Login
-              </CustomTypo>
-              <div className="input-container">
-                <div className="input-field">
-                  <label htmlFor="email">Email</label>
-                  <input type="email" id="email" onChange={this.handleChange} />
+      <div className="auth-section">
+        <div className="left-side">
+          <div className="brand-logo">
+            <Link to="/">
+              <img src={collab} alt="Brand-logo" />
+            </Link>
+          </div>
+        </div>
+        <div className="right-side">
+          <CustomCard
+            style={{
+              height: "fit-content",
+              width: "50vh",
+              border: "none",
+              boxShadow: "none",
+            }}
+          >
+            <CardContent>
+              <form onSubmit={this.handleSubmit}>
+                <CustomTypo
+                  sx={{ fontSize: "2.5em", fontWeight: 600, color: "#131E3F" }}
+                  variant="h4"
+                >
+                  Login
+                </CustomTypo>
+                <div className="input-container">
+                  <div className="input-field">
+                    <label htmlFor="email">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                  <div className="input-field">
+                    <label htmlFor="password">Password</label>
+                    <input
+                      type="password"
+                      id="password"
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                  <div className="input-field">
+                    <button className="auth-button">Login</button>
+                  </div>
                 </div>
-                <div className="input-field">
-                  <label htmlFor="password">Password</label>
-                  <input
-                    type="password"
-                    id="password"
-                    onChange={this.handleChange}
-                  />
+                <div className="red-text center">
+                  {authError ? <p>{authError}</p> : null}
                 </div>
-                <div className="input-field">
-                  {/* <SecondaryButton style={{ width: "100%" }} variant="outlined">
-                    Login
-                  </SecondaryButton> */}
-                  <button className="auth-button" >Login</button>
-                </div>
-              </div>
-              <div className="red-text center">
-                {authError ? <p>{authError}</p> : null}
-              </div>
-            </form>
-          </CardContent>
-        </CustomCard>
+              </form>
+            </CardContent>
+          </CustomCard>
+        </div>
       </div>
     );
   }
