@@ -1,0 +1,47 @@
+$Gainsboro: #dfdfdf;
+$HRcolor: #505050;
+$borderRadius: 4px;
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+form {
+  @include flex(column, center, center);
+  padding: 20px;
+//   margin-left: 10%;
+//   margin-right: 10%;
+  opacity: 1;
+  border: none;
+  outline: none;
+  border-radius: 9px;
+}
+
+.input-container {
+  @include flex(column, flex-start, flex-start);
+  padding: 1em 0;
+  margin: 2em 0;
+  margin-top: 1.4em;
+}
+.input-field {
+  @include flex(column, flex-start, flex-start);
+  margin-bottom: 1em;
+  label {
+    font-size: 1.1em;
+    letter-spacing: 1.2px;
+    margin-bottom: 0.3em;
+    font-weight: 500;
+  }
+  input {
+    width: 20em;
+    border: none;
+    outline: none;
+    background-color: #eee;
+    border-radius: $borderRadius;
+    font-family: inherit;
+    padding: 0.5em;
+  }
+}
