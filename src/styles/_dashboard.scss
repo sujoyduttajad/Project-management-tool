@@ -1,5 +1,4 @@
-$Gainsboro: #dfdfdf;
-$HRcolor: #505050;
+
 
 @mixin flex($direction, $justify, $align) {
   display: flex;
@@ -16,3 +15,4 @@ $HRcolor: #505050;
   height: 100%;
   overflow-y: scroll;
 }
+
