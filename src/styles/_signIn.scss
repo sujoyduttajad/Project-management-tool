@@ -1,4 +1,4 @@
-@use './variables/variables';
+@use "./variables/variables";
 
 @mixin flex($direction, $justify, $align) {
   display: flex;
@@ -26,6 +26,7 @@ form {
 .input-field {
   @include flex(column, flex-start, flex-start);
   margin-bottom: 1em;
+  width: 100%;
   label {
     font-size: 1.1em;
     letter-spacing: 1.2px;
@@ -33,7 +34,7 @@ form {
     font-weight: 500;
   }
   input {
-    width: 20em;
+    width: 95%;
     border: none;
     outline: none;
     background-color: #eee;
@@ -41,8 +42,42 @@ form {
     font-family: inherit;
     font-size: 0.9em;
     padding: 0.5em;
-    &:focus, &:active {
-        outline: 1.6px solid variables.$primaryColor;
+    &:focus,
+    &:active {
+      outline: 1.6px solid variables.$primaryColor;
     }
+  }
+}
+
+.auth-button {
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  box-sizing: border-box;
+  letter-spacing: 0.02857em;
+  min-width: 64px;
+  font-size: 1em;
+  font-weight: 600;
+  width: 100%;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #131e3f;
+  background-color: #e7ecf8;
+  outline: none;
+  margin: 0.6em 0;
+  padding: 0.5em 0.7em;
+  border-radius: 4px;
+  border-color: 1px solid variables.$primaryColor;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+  &:hover {
+    background-color: #d0d8f1;
+    border-color: #131e3f;
+    box-shadow: -1px 3px 8px 0px rgba(56, 56, 56, 0.91);
   }
 }
