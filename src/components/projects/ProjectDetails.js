@@ -21,7 +21,7 @@ function ProjectDetails(props) {
           <CustomCard>
             <CardContent>
               <CustomTypo
-                sx={{ fontSize: "1.6em", marginBottom: "1em", fontWeight: 700 }}
+                sx={{ fontSize: "1.6em", marginBottom: "1em", fontWeight: 700, color: "#131E3F" }}
                 variant="h4"
                 gutterBottom
               >
