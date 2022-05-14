@@ -5,21 +5,7 @@ import { PrimaryButton, SecondaryButton } from "./SignedInLinks";
 function SignedOutLinks() {
   return (
     <div className="auth-side">
-      {/* <ul className="right">
-        <li className="tab">
-          <PrimaryButton
-            variant="contained"
-            style={{ width: "10em", fontSize: "1em", textTransform: 'uppercase' }}
-          >
-            <NavLink to="/signup">Sign Up</NavLink>
-          </PrimaryButton>
-        </li>
-        <li className="tab">
-          <SecondaryButton variant="outlined" style={{ width: "11em" }}>
-            <NavLink to="/signin">Login</NavLink>
-          </SecondaryButton>
-        </li>
-      </ul> */}
+      
     </div>
   );
 }
