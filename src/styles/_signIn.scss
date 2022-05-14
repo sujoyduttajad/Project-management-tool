@@ -1,6 +1,4 @@
-$Gainsboro: #dfdfdf;
-$HRcolor: #505050;
-$borderRadius: 4px;
+@use './variables/variables';
 
 @mixin flex($direction, $justify, $align) {
   display: flex;
@@ -12,8 +10,6 @@ $borderRadius: 4px;
 form {
   @include flex(column, center, center);
   padding: 20px;
-//   margin-left: 10%;
-//   margin-right: 10%;
   opacity: 1;
   border: none;
   outline: none;
@@ -22,6 +18,7 @@ form {
 
 .input-container {
   @include flex(column, flex-start, flex-start);
+  width: 80%;
   padding: 1em 0;
   margin: 2em 0;
   margin-top: 1.4em;
@@ -40,8 +37,12 @@ form {
     border: none;
     outline: none;
     background-color: #eee;
-    border-radius: $borderRadius;
+    border-radius: variables.$borderRadius;
     font-family: inherit;
+    font-size: 0.9em;
     padding: 0.5em;
+    &:focus, &:active {
+        outline: 1.6px solid variables.$primaryColor;
+    }
   }
 }
