@@ -16,8 +16,12 @@ export const PrimaryButton = styled(Button)({
   backgroundColor: "#131E3F",
   margin: "0.6em 0",
   padding: "0.2em 0.7em",
+  border: "none",
+  outline: "none",
   "&:hover": {
     backgroundColor: "#131E3F",
+    border: "none",
+    outline: "none",
     boxShadow: "-1px 3px 8px 0px rgba(56,56,56,0.91)",
   },
 });
@@ -30,6 +34,7 @@ export const SecondaryButton = styled(Button)({
   textTransform: "uppercase",
   color: "#131E3F",
   backgroundColor: "#E7ECF8",
+  outline: "none",
   margin: "0.6em 0",
   padding: "0.2em 0.7em",
   borderColor: "#131E3F",
@@ -50,17 +55,17 @@ export const StyledChip = styled(Chip)({
   margin: "0.6em 0",
   padding: "1.15em 0",
   borderColor: "#131E3F",
-  borderRadius: '20px',
+  borderRadius: "20px",
   "& .MuiChip-avatar": {
-    width: '35px',
+    width: "35px",
     height: "35px",
-    fontSize: '1em',
-    color: '#c2c2c2',
+    fontSize: "1em",
+    color: "#c2c2c2",
   },
   "& .MuiChip-clickable .MuiChip-clickableColorDefault ": {
-      backgroundColor: "#D0D8F1",
-      borderColor: "#131E3F",
-      boxShadow: "-1px 3px 8px 0px rgba(56,56,56,0.91)",
+    backgroundColor: "#D0D8F1",
+    borderColor: "#131E3F",
+    boxShadow: "-1px 3px 8px 0px rgba(56,56,56,0.91)",
   },
   "&:hover": {
     backgroundColor: "#D0D8F1",
@@ -70,7 +75,6 @@ export const StyledChip = styled(Chip)({
 });
 
 function SignedInLinks(props) {
-  
   return (
     <div className="sidebar-column">
       <ul className="right">
@@ -96,12 +100,14 @@ function SignedInLinks(props) {
                   {props.profile.initials}
                 </Avatar>
               }
-              label={<h4 className="avatar-h4">Hi! {props.profile.firstName}</h4>}
+              label={
+                <h4 className="avatar-h4">Hi! {props.profile.firstName}</h4>
+              }
             />
           </NavLink>
         </li>
         <li className="tab">
-          <SecondaryButton variant="outlined" style={{ width: '11em'}}>
+          <SecondaryButton variant="outlined" style={{ width: "11em" }}>
             <a onClick={props.signOut}>Log Out</a>
           </SecondaryButton>
         </li>
