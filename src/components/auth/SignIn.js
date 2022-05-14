@@ -26,12 +26,12 @@ class SignIn extends Component {
     return (
       <div className="feed-section">
         <CustomCard
-          style={{ marginTop: "30vh", height: "20em", width: "50vh" }}
+          style={{ height: "fit-content", width: "50vh" }}
         >
           <CardContent>
-            <form onSubmit={this.handleSubmit} className="">
+            <form onSubmit={this.handleSubmit} >
               <CustomTypo
-                sx={{ fontSize: "2em", fontWeight: 600, color: "#131E3F" }}
+                sx={{ fontSize: "2.5em", fontWeight: 600, color: "#131E3F" }}
                 variant="h4"
               >
                 Login
