@@ -28,7 +28,7 @@ export const PrimaryButton = styled(Button)({
 
 export const SecondaryButton = styled(Button)({
   fontFamily: "'Noto Sans', sans-serif",
-  fontSize: "1sem",
+  fontSize: "0.9em",
   fontWeight: 600,
   width: "100%",
   textTransform: "uppercase",
