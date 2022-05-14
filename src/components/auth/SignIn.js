@@ -4,8 +4,9 @@ import { signIn } from "../../store/actions/authActions";
 import { Redirect } from "react-router-dom";
 import { CustomCard, CustomTypo } from "../projects/ProjectSummary";
 import { CardContent } from "@mui/material";
-import { Link } from "react-router-dom";
-import collab from "../../images/collab.svg";
+import { Link, NavLink } from "react-router-dom";
+import collabLogo from "../../images/collab-logo-2.svg";
+import collabP from "../../images/collab-logo.svg";
 
 class SignIn extends Component {
   state = {
@@ -28,13 +29,27 @@ class SignIn extends Component {
     return (
       <div className="auth-section">
         <div className="left-side">
-          <div className="brand-logo">
+          {/* <div className="brand-logo">
             <Link to="/">
-              <img src={collab} alt="Brand-logo" />
+              <img src={collabLogo} alt="Brand-logo" />
             </Link>
-          </div>
+          </div> */}
         </div>
         <div className="right-side">
+          <div className="brand-logo">
+            <Link to="/">
+              <img src={collabP} alt="Brand-logo" />
+            </Link>
+          </div>
+          <CustomTypo sx={{ fontWeight: 500, color: "#505050" }} variant="h5">
+            Hello Again!
+          </CustomTypo>
+          <CustomTypo
+            sx={{ fontWeight: 500, color: "#C0C0C0" }}
+            variant="body1"
+          >
+            Please login with your credentials
+          </CustomTypo>
           <CustomCard
             style={{
               height: "fit-content",
@@ -72,12 +87,23 @@ class SignIn extends Component {
                     <button className="auth-button">Login</button>
                   </div>
                 </div>
-                <div className="red-text center">
-                  {authError ? <p>{authError}</p> : null}
-                </div>
+                {authError ? (
+                  <div className="red-warning">
+                    <p>**{authError}</p>
+                  </div>
+                ) : null}
               </form>
             </CardContent>
           </CustomCard>
+          <CustomTypo
+            sx={{ fontWeight: 400, color: "#C0C0C0" }}
+            variant="body2"
+          >
+            If you don't have an account, please
+            <NavLink to="/signup" className="auth-nav-link">
+              create a new one
+            </NavLink>
+          </CustomTypo>
         </div>
       </div>
     );
