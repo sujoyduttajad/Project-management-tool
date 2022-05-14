@@ -4,8 +4,8 @@ import { PrimaryButton, SecondaryButton } from "./SignedInLinks";
 
 function SignedOutLinks() {
   return (
-    <div className="sidebar-column">
-      <ul className="right">
+    <div className="auth-side">
+      {/* <ul className="right">
         <li className="tab">
           <PrimaryButton
             variant="contained"
@@ -19,7 +19,7 @@ function SignedOutLinks() {
             <NavLink to="/signin">Login</NavLink>
           </SecondaryButton>
         </li>
-      </ul>
+      </ul> */}
     </div>
   );
 }
