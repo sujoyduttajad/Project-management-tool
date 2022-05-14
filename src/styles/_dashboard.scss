@@ -8,11 +8,7 @@ $HRcolor: #505050;
   justify-content: $justify;
 }
 
-.feed-section {
-  @include flex(row, center, center);
-  margin: 0 auto;
-  width: 60vw;
-}
+
 .dashboard-container {
   @include flex(column, center, center);
   margin: 0 auto;
