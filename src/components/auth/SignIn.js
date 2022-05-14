@@ -4,6 +4,7 @@ import { signIn } from "../../store/actions/authActions";
 import { Redirect } from "react-router-dom";
 import { CustomCard, CustomTypo } from "../projects/ProjectSummary";
 import { CardContent } from "@mui/material";
+import { SecondaryButton } from "../layout/SignedInLinks";
 
 class SignIn extends Component {
   state = {
@@ -25,11 +26,9 @@ class SignIn extends Component {
 
     return (
       <div className="feed-section">
-        <CustomCard
-          style={{ height: "fit-content", width: "50vh" }}
-        >
+        <CustomCard style={{ height: "fit-content", width: "50vh" }}>
           <CardContent>
-            <form onSubmit={this.handleSubmit} >
+            <form onSubmit={this.handleSubmit}>
               <CustomTypo
                 sx={{ fontSize: "2.5em", fontWeight: 600, color: "#131E3F" }}
                 variant="h4"
@@ -50,7 +49,10 @@ class SignIn extends Component {
                   />
                 </div>
                 <div className="input-field">
-                  <button className="">Login</button>
+                  {/* <SecondaryButton style={{ width: "100%" }} variant="outlined">
+                    Login
+                  </SecondaryButton> */}
+                  <button className="auth-button" >Login</button>
                 </div>
               </div>
               <div className="red-text center">
