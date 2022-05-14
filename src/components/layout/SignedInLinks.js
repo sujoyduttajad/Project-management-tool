@@ -1,12 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { signOut } from "../../store/actions/authActions";
 import { Avatar, Button, Chip } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { BiMessageSquareAdd } from "react-icons/bi";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md"
 import { Link } from "react-router-dom";
 import collab from "../../images/collab.svg";
+import collabP from "../../images/collab-logo.svg";
 
 export const PrimaryButton = styled(Button)({
   fontFamily: "'Noto Sans', sans-serif",
@@ -77,12 +79,16 @@ export const StyledChip = styled(Chip)({
 });
 
 function SignedInLinks(props) {
+
+  const [dropOpen, setDropOpen] = useState(false);
+
   return (
     <nav className="nav-wrapper">
       <div className="container">
         <div className="brand-logo">
-          <Link to="/">
-            <img src={collab} alt="Brand-logo" />
+          <Link to="/" className="home-link">
+            <img src={collab} alt="Brand-name" />
+            <img className="logo" src={collabP} alt="Brand-logo" />
           </Link>
         </div>
         <div className="sidebar-column">
@@ -107,13 +113,20 @@ function SignedInLinks(props) {
                       variant="circular"
                       sx={{
                         bgcolor: "#131E3F",
+                        lineHeight: 0
                       }}
                     >
                       {props.profile.initials}
                     </Avatar>
                   }
                   label={
-                    <h4 className="avatar-h4">Hi! {props.profile.firstName}</h4>
+                    <h4 className="avatar-h4">
+                      Hi! {props.profile.firstName}
+                    </h4>
+                  }
+                  onDelete={() => setDropOpen(!dropOpen)}
+                  deleteIcon={
+                    <MdOutlineKeyboardArrowDown style={{ color: "#131E3F" }}/>
                   }
                 />
               </NavLink>
