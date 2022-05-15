@@ -112,7 +112,7 @@ function SignedInLinks(props) {
                 sx={{ width: "11em", justifyContent: "flex-start" }}
                 startIcon={<RiDashboardFill />}
               >
-                Dashboard
+                <NavLink to="/">Dashboard</NavLink>
               </ExpandButton>
             </li>
             <li className="tab">
@@ -120,7 +120,7 @@ function SignedInLinks(props) {
                 sx={{ width: "11em", justifyContent: "flex-start" }}
                 startIcon={<BsKanbanFill />}
               >
-                Kanban
+                <NavLink to="/kanbanBoard">Kanban</NavLink>
               </ExpandButton>
             </li>
             <li className="tab">
@@ -128,7 +128,7 @@ function SignedInLinks(props) {
                 sx={{ width: "11em", justifyContent: "flex-start" }}
                 startIcon={<FaUsers />}
               >
-                Teams
+                <NavLink to="/teams">Teams</NavLink>
               </ExpandButton>
             </li>
             <li className="tab">
@@ -136,7 +136,7 @@ function SignedInLinks(props) {
                 sx={{ width: "11em", justifyContent: "flex-start" }}
                 startIcon={<RiMessage2Fill />}
               >
-                Messages
+                <NavLink to="/chat">Messages</NavLink>
               </ExpandButton>
             </li>
             <li className="tab">
@@ -144,7 +144,7 @@ function SignedInLinks(props) {
                 sx={{ width: "11em", justifyContent: "flex-start" }}
                 startIcon={<RiSettings3Fill />}
               >
-                Settings
+                <NavLink to="/settings">Settings</NavLink>
               </ExpandButton>
             </li>
           </ul>
