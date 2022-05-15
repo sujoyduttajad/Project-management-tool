@@ -43,7 +43,7 @@ form {
     margin-bottom: 0.3em;
     font-weight: 500;
   }
-  input {
+  input, textarea {
     width: 95%;
     border: none;
     outline: none;
@@ -56,6 +56,9 @@ form {
     &:active {
       outline: 1.6px solid variables.$primaryColor;
     }
+  }
+  textarea {
+    resize: none;
   }
 }
 .auth-brand-logo {
