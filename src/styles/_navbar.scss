@@ -31,7 +31,7 @@
 
 .brand-logo {
     @include flex(row, center, center);
-    margin-top: 2em;
+    margin-top: 1em;
     .home-link {
         @include flex(row, space-evenly, center);
         &:hover {
