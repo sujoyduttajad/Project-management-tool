@@ -43,8 +43,8 @@ function ProjectSummary({ project }) {
           <CustomTypo variant="body1">
             Posted by {project.authorFirstName} {project.authorLastName}
           </CustomTypo>
-          <CustomTypo variant="body2">
-            {moment(project.createdAt.toDate()).calendar()}
+          <CustomTypo variant="body2" sx={{ color: "#A1A2A3" }}>
+            <i>{moment(project.createdAt.toDate()).calendar()}</i>
           </CustomTypo>
         </CardContent>
         <CardActions>
