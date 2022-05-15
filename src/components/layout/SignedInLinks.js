@@ -1,14 +1,18 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { signOut } from "../../store/actions/authActions";
 import { Avatar, Button, Chip } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { BiMessageSquareAdd } from "react-icons/bi";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md"
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { RiDashboardFill, RiMessage2Fill, RiSettings3Fill } from "react-icons/ri";
+import { FaUsers } from "react-icons/fa";
+import { BsKanbanFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import collab from "../../images/collab.svg";
 import collabP from "../../images/collab-logo.svg";
+import { ExpandButton } from "../projects/ProjectSummary";
 
 export const PrimaryButton = styled(Button)({
   fontFamily: "'Noto Sans', sans-serif",
@@ -79,7 +83,7 @@ export const StyledChip = styled(Chip)({
 });
 
 function SignedInLinks(props) {
-  console.log(props)
+  console.log(props);
   const [dropOpen, setDropOpen] = useState(false);
 
   return (
@@ -91,7 +95,6 @@ function SignedInLinks(props) {
             <img className="logo" src={collabP} alt="Brand-logo" />
           </Link>
         </div>
-        {/* <div className="sidebar-column"></div> */}
         <div className="sidebar-column">
           <ul className="right">
             <li>
@@ -105,6 +108,48 @@ function SignedInLinks(props) {
           </ul>
           <ul className="right">
             <li className="tab">
+              <ExpandButton
+                sx={{ width: "11em", justifyContent: "flex-start" }}
+                startIcon={<RiDashboardFill />}
+              >
+                Dashboard
+              </ExpandButton>
+            </li>
+            <li className="tab">
+              <ExpandButton
+                sx={{ width: "11em", justifyContent: "flex-start" }}
+                startIcon={<BsKanbanFill />}
+              >
+                Kanban
+              </ExpandButton>
+            </li>
+            <li className="tab">
+              <ExpandButton
+                sx={{ width: "11em", justifyContent: "flex-start" }}
+                startIcon={<FaUsers />}
+              >
+                Teams
+              </ExpandButton>
+            </li>
+            <li className="tab">
+              <ExpandButton
+                sx={{ width: "11em", justifyContent: "flex-start" }}
+                startIcon={<RiMessage2Fill />}
+              >
+                Messages
+              </ExpandButton>
+            </li>
+            <li className="tab">
+              <ExpandButton
+                sx={{ width: "11em", justifyContent: "flex-start" }}
+                startIcon={<RiSettings3Fill />}
+              >
+                Settings
+              </ExpandButton>
+            </li>
+          </ul>
+          <ul className="right">
+            <li className="tab">
               <NavLink to="/">
                 <StyledChip
                   variant="outlined"
@@ -114,20 +159,18 @@ function SignedInLinks(props) {
                       variant="circular"
                       sx={{
                         bgcolor: "#131E3F",
-                        lineHeight: 0
+                        lineHeight: 0,
                       }}
                     >
                       {props.profile.initials}
                     </Avatar>
                   }
                   label={
-                    <h4 className="avatar-h4">
-                      Hi! {props.profile.firstName}
-                    </h4>
+                    <h4 className="avatar-h4">Hi! {props.profile.firstName}</h4>
                   }
                   onDelete={() => setDropOpen(!dropOpen)}
                   deleteIcon={
-                    <MdOutlineKeyboardArrowDown style={{ color: "#131E3F" }}/>
+                    <MdOutlineKeyboardArrowDown style={{ color: "#131E3F" }} />
                   }
                 />
               </NavLink>
