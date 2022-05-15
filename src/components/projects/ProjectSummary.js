@@ -5,6 +5,7 @@ import { styled } from "@mui/material/styles";
 
 export const CustomCard = styled(Card)({
     fontFamily: "'Noto Sans', sans-serif",
+    maxWidth: "60em",
     width: '100%',
     "&:hover": {
       boxShadow: "-1px 3px 8px 0px rgba(56,56,56,0.91)",
@@ -17,7 +18,7 @@ export const CustomTypo = styled(Typography)({
 
 export const ExpandButton = styled(Button)({
   fontFamily: "'Noto Sans', sans-serif",
-  fontSize: "1sem",
+  fontSize: "1em",
   fontWeight: 600,
   width: "100%",
   textTransform: "uppercase",
