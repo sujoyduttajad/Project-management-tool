@@ -17,11 +17,16 @@ function ProjectDetails(props) {
     return (
       <div className="feed-section">
         <div className="project-detail">
-            <h1 className="project-header">Project Detail</h1>
+          <h1 className="project-header">Project Detail</h1>
           <CustomCard>
             <CardContent>
               <CustomTypo
-                sx={{ fontSize: "1.6em", marginBottom: "1em", fontWeight: 700, color: "#131E3F" }}
+                sx={{
+                  fontSize: "1.6em",
+                  marginBottom: "1em",
+                  fontWeight: 700,
+                  color: "#131E3F",
+                }}
                 variant="h4"
                 gutterBottom
               >
