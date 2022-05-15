@@ -31,7 +31,7 @@ class SignUp extends Component {
     return (
       <div className="auth-section">
         <div className="left-side-signup">
-          <div className="brand-logo">
+          <div className="auth-brand-logo">
             <Link to="/">
               <img src={collabP} alt="Brand-logo" />
             </Link>
@@ -95,6 +95,15 @@ class SignUp extends Component {
                   <div className="input-field">
                     <button className="auth-button">Create Account</button>
                   </div>
+                  <CustomTypo
+                    sx={{ fontWeight: 400, color: "#7A7A7A" }}
+                    variant="body2"
+                  >
+                    Already have an account?
+                    <NavLink to="/signin" className="auth-nav-link">
+                      Login here!
+                    </NavLink>
+                  </CustomTypo>
                 </div>
                 {authError ? (
                   <div className="red-warning">
