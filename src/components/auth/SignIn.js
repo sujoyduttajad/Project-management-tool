@@ -36,7 +36,7 @@ class SignIn extends Component {
           </div> */}
         </div>
         <div className="right-side">
-          <div className="brand-logo">
+          <div className="auth-brand-logo">
             <Link to="/">
               <img src={collabP} alt="Brand-logo" />
             </Link>
