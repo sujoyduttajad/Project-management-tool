@@ -79,7 +79,7 @@ export const StyledChip = styled(Chip)({
 });
 
 function SignedInLinks(props) {
-
+  console.log(props)
   const [dropOpen, setDropOpen] = useState(false);
 
   return (
@@ -91,6 +91,7 @@ function SignedInLinks(props) {
             <img className="logo" src={collabP} alt="Brand-logo" />
           </Link>
         </div>
+        {/* <div className="sidebar-column"></div> */}
         <div className="sidebar-column">
           <ul className="right">
             <li>
