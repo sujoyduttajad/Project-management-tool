@@ -1,15 +1,21 @@
 import React from "react";
 import moment from "moment";
-import { Card, CardActions, CardContent, Typography, Button } from "@mui/material";
+import {
+  Card,
+  CardActions,
+  CardContent,
+  Typography,
+  Button,
+} from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 export const CustomCard = styled(Card)({
-    fontFamily: "'Noto Sans', sans-serif",
-    maxWidth: "60em",
-    width: '100%',
-    "&:hover": {
-      boxShadow: "-1px 3px 8px 0px rgba(56,56,56,0.91)",
-    },
+  fontFamily: "'Noto Sans', sans-serif",
+  maxWidth: "60em",
+  width: "100%",
+  "&:hover": {
+    boxShadow: "-1px 3px 8px 0px rgba(56,56,56,0.91)",
+  },
 });
 
 export const CustomTypo = styled(Typography)({
@@ -35,12 +41,16 @@ export const ExpandButton = styled(Button)({
 });
 
 function ProjectSummary({ project }) {
-
   return (
     <div className="card-layout">
       <CustomCard>
         <CardContent>
-          <CustomTypo sx={{ fontSize: '2em' }} variant="h4">{project.title}</CustomTypo>
+          <CustomTypo
+            sx={{ fontSize: "1.5em", fontWeight: 600, marginBottom: "1em" }}
+            variant="h4"
+          >
+            {project.title}
+          </CustomTypo>
           <CustomTypo variant="body1">
             Posted by {project.authorFirstName} {project.authorLastName}
           </CustomTypo>
@@ -49,11 +59,7 @@ function ProjectSummary({ project }) {
           </CustomTypo>
         </CardContent>
         <CardActions>
-        <ExpandButton 
-          disableElevation
-          disableFocusRipple
-          size="small"
-          >
+          <ExpandButton disableElevation disableFocusRipple size="small">
             Show More
           </ExpandButton>
         </CardActions>
