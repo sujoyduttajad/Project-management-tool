@@ -12,13 +12,18 @@ export const CustomSearch = styled(TextField)({
   width: "100%",
   fontSize: '1em',
   "&:hover": {
-    boxShadow: "-1px 3px 8px 0px rgba(56,56,56,0.91)",
+    // boxShadow: "-1px 3px 8px 0px rgba(56,56,56,0.91)",
   },
 });
 
 function ProjectList({ projects }) {
 
   console.log(projects)
+  const titleList = async () => {
+    if(projects)
+    return await projects.filter(project => project.title && project.title)
+  } 
+  console.log(titleList())
 
   return (
     <section className="project-list-section">
