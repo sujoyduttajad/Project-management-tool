@@ -6,6 +6,8 @@ import {
   CardContent,
   Typography,
   Button,
+  TextField,
+  Autocomplete,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
@@ -43,6 +45,7 @@ export const ExpandButton = styled(Button)({
 function ProjectSummary({ project }) {
   return (
     <div className="card-layout">
+
       <CustomCard>
         <CardContent>
           <CustomTypo
