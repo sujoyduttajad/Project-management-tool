@@ -31,3 +31,9 @@
     font-size: 2.5em;
   }
 }
+
+.serach-container {
+  @include flex(row, flex-start, flex-start);
+  width: 100%;
+
+}
