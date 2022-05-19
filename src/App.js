@@ -20,6 +20,7 @@ function App() {
           <Route path='/signup' component={SignUp} />
           <Route path='/create' component={CreateProject} />
         </Switch>
+        
       </div>
     </Router>
   );
