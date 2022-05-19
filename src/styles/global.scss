@@ -49,6 +49,7 @@ li {
 
 .css-blneid-MuiAutocomplete-root .MuiOutlinedInput-root {
   padding: 0 !important;
+  padding-left: 0.5em !important;
 }
 
 .css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root {
@@ -56,8 +57,9 @@ li {
 }
 .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
   font-family: 'Noto Sans', sans-serif !important;
-  font-weight: 500 !important;
+  font-weight: 400 !important;
   top: -8px !important;
+
   &:focus {
     color: #131E3F !important;
   }
