@@ -1,24 +1,21 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import ProjectSummary from "./ProjectSummary";
 import { Link } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import { styled } from "@mui/material/styles";
 
-
 export const CustomSearch = styled(TextField)({
   fontFamily: "'Noto Sans', sans-serif",
   maxWidth: "60em",
   width: "100%",
-  fontSize: '1em',
+  fontSize: "1em",
   "&:hover": {
     // boxShadow: "-1px 3px 8px 0px rgba(56,56,56,0.91)",
   },
 });
 
 function ProjectList({ projects, projectList }) {
-  
-
   return (
     <section className="project-list-section">
       <div className="serach-container">
@@ -26,8 +23,14 @@ function ProjectList({ projects, projectList }) {
           disablePortal
           id="combo-box-demo"
           options={projectList}
-          sx={{ width: "100%", fontFamily: "'Noto Sans', sans-serif", fontWeight: 500 }}
-          renderInput={(params) => <CustomSearch {...params} label="Projects" />}
+          sx={{
+            width: "100%",
+            fontFamily: "'Noto Sans', sans-serif",
+            fontWeight: 500,
+          }}
+          renderInput={(params) => (
+            <CustomSearch {...params} label="Projects" />
+          )}
         />
       </div>
       {projects &&
