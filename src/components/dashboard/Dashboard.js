@@ -10,10 +10,17 @@ class Dashboard extends Component {
   render() {
     const { projects, auth } = this.props;
     if (!auth.uid) return <Redirect to="/signin" />;
+
+    let projectList;
+    if (projects) {
+      projectList = projects.map(project => project.title);
+    }
+    
+    
     return (
       <section className="feed-section">
         <div className="dashboard-container">
-          <ProjectList projects={projects} />
+          <ProjectList projects={projects} projectList={projectList} />
         </div>
         <div className="">
           <Notifications />
