@@ -1,6 +1,7 @@
 @import "./dashboard";
 @import "./notification";
 @import "./navbar";
+@import "./sidepanel";
 @import "./signUp";
 @import "./signIn";
 @import "./projectSummary";
@@ -34,7 +35,6 @@ li {
 .feed-section {
   @include flex(row, center, center);
   margin: 0 auto;
-  // height: 100vh;
   width: 60vw;
 }
 
