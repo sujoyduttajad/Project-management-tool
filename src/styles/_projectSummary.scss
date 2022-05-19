@@ -35,5 +35,5 @@
 .serach-container {
   @include flex(row, flex-start, flex-start);
   width: 100%;
-
+  margin: 1.3em;
 }
