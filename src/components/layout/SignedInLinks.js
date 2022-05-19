@@ -83,7 +83,7 @@ export const StyledChip = styled(Chip)({
 });
 
 function SignedInLinks(props) {
-  console.log(props);
+  
   const [dropOpen, setDropOpen] = useState(false);
 
   return (
