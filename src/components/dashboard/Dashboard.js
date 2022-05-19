@@ -17,6 +17,7 @@ class Dashboard extends Component {
       projectList = projects.map(project => project.title);
     }
     
+    // console.log(this.props);
     
     return (
       <section className="feed-section">
@@ -41,5 +42,6 @@ const mapStateToProps = (state) => {
 
 export default compose(
   connect(mapStateToProps),
-  firestoreConnect([{ collection: "projects", orderBy: ["createdAt", "desc"] }])
+  firestoreConnect([{ collection: "projects", orderBy: ["createdAt", "desc"] }]),
+  // firestoreConnect([{ collection: "users", orderBy: ["createdAt", "desc"] }])
 )(Dashboard);
