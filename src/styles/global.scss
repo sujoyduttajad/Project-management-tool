@@ -47,3 +47,15 @@ li {
   box-shadow: -1px 3px 8px 0px rgba(56, 56, 56, 0.91);
 }
 
+.css-blneid-MuiAutocomplete-root .MuiOutlinedInput-root {
+  padding: 0 !important;
+}
+
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  font-family: 'Noto Sans', sans-serif !important;
+  font-weight: 500 !important;
+  top: -8px !important;
+  &:focus {
+    color: #131E3F !important;
+  }
+}
