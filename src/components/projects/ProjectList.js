@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import ProjectSummary from "./ProjectSummary";
 import { Link } from "react-router-dom";
 import TextField from "@mui/material/TextField";
@@ -18,12 +18,21 @@ export const CustomSearch = styled(TextField)({
 
 function ProjectList({ projects }) {
 
-  console.log(projects)
-  const titleList = async () => {
-    if(projects)
-    return await projects.filter(project => project.title && project.title)
-  } 
-  console.log(titleList())
+  console.log(projects);
+  let projectList = [];
+  useEffect(() => {
+    const titleList = async () => {
+      const titles = [];
+      if(projects) {
+        await projects.map(project => titles.push(project.title))
+      }
+      return titles; 
+    } 
+    projectList = titleList();
+  }, [])
+
+    console.log(projectList)
+  
 
   return (
     <section className="project-list-section">
@@ -31,7 +40,7 @@ function ProjectList({ projects }) {
         <Autocomplete
           disablePortal
           id="combo-box-demo"
-          options={projects}
+          options={projectList}
           sx={{ width: "100%", fontFamily: "'Noto Sans', sans-serif", fontWeight: 500 }}
           renderInput={(params) => <CustomSearch {...params} label="Projects" />}
         />
