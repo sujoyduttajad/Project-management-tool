@@ -16,22 +16,22 @@ export const CustomSearch = styled(TextField)({
   },
 });
 
-function ProjectList({ projects }) {
+function ProjectList({ projects, projectList }) {
 
-  console.log(projects);
-  let projectList = [];
-  useEffect(() => {
-    const titleList = async () => {
-      const titles = [];
-      if(projects) {
-        await projects.map(project => titles.push(project.title))
-      }
-      return titles; 
-    } 
-    projectList = titleList();
-  }, [])
+  // // console.log(projects);
+  // let projectList = [];
+  // // useEffect(() => {
+  //   const titleList = async () => {
+  //     const titles = [];
+  //     if(projects) {
+  //       await projects.map(project => titles.push(project.title))
+  //     }
+  //     return titles; 
+  //   } 
+  //   projectList = titleList();
+  // // }, [])
 
-    console.log(projectList)
+  //   console.log(projectList)
   
 
   return (
