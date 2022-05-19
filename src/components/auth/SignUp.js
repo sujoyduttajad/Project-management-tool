@@ -5,7 +5,7 @@ import { signUp } from "../../store/actions/authActions";
 import { CustomCard, CustomTypo } from "../projects/ProjectSummary";
 import { CardContent } from "@mui/material";
 import { Link, NavLink } from "react-router-dom";
-import collabLogo from "../../images/collab-logo-2.svg";
+// import collabLogo from "../../images/collab-logo-2.svg";
 import collabP from "../../images/collab-logo.svg";
 
 class SignUp extends Component {
