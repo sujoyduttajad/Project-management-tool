@@ -10,8 +10,9 @@ export const CustomSearch = styled(TextField)({
   maxWidth: "60em",
   width: "100%",
   fontSize: "1em",
-  "&:hover": {
-    // boxShadow: "-1px 3px 8px 0px rgba(56,56,56,0.91)",
+  
+  "&:focus": {
+    border: "1px solid green",
   },
 });
 
