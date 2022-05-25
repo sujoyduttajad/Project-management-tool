@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 import { firestoreConnect } from "react-redux-firebase";
 import { compose } from "redux";
 import { Redirect } from "react-router-dom";
-import SidePanel from "../layout/SidePanel";
 
 class Dashboard extends Component {
   render() {
@@ -23,7 +22,6 @@ class Dashboard extends Component {
       <section className="feed-section">
         <div className="dashboard-container">
           <ProjectList projects={projects} projectList={projectList} />
-          <SidePanel/>
         </div>
         <div className="">
           <Notifications />
