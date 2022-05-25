@@ -18,7 +18,7 @@ function ProjectDetails(props) {
       <div className="feed-section">
         <div className="project-detail">
           <h1 className="project-header">Project Detail</h1>
-          <CustomCard>
+          <CustomCard style={{ maxWidth: "50em"}}>
             <CardContent>
               <CustomTypo
                 sx={{
