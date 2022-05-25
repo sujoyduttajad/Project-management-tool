@@ -55,7 +55,7 @@ class CreateProject extends Component {
                   </div>
 
                   <div className="input-field">
-                    <button className="auth-button">Create</button>
+                    <button className="auth-button" style={{ width: "50%"}}>Create</button>
                   </div>
                 </div>
               </form>
