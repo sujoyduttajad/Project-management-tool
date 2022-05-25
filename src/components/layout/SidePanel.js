@@ -20,7 +20,7 @@ const SidePanel = (props) => {
             <NavLink to="/">
               <StyledChip
                 sx={{
-                  backgroundColor: "#fff"
+                  backgroundColor: "#fff",
                 }}
                 variant="outlined"
                 clickable
@@ -46,14 +46,17 @@ const SidePanel = (props) => {
             </NavLink>
           </li>
           <li className="tab">
-            <SecondaryButton variant="outlined" style={{ width: "11em", backgroundColor: "#fff"  }}>
+            <SecondaryButton
+              variant="outlined"
+              style={{ width: "11em", backgroundColor: "#fff" }}
+            >
               <a onClick={props.signOut}>Log Out</a>
             </SecondaryButton>
           </li>
         </ul>
         <div>
           <h2>All Users</h2>
-          <hr/>
+          <hr />
         </div>
       </div>
     </nav>
@@ -64,7 +67,7 @@ const mapStateToProps = (state) => {
   return {
     auth: state.firebase.auth,
     profile: state.firebase.profile,
-    users: state.firebase
+    users: state.firebase,
   };
 };
 const mapDispatchToProps = (dispatch) => {
