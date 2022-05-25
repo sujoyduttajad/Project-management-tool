@@ -7,7 +7,6 @@ import ProjectDetails from './components/projects/ProjectDetails';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import CreateProject from './components/projects/CreateProject';
-import SidePanel from './components/layout/SidePanel';
 
 function App() {
   return (
@@ -21,7 +20,7 @@ function App() {
           <Route path='/signup' component={SignUp} />
           <Route path='/create' component={CreateProject} />
         </Switch>
-        <SidePanel />
+        
       </div>
     </Router>
   );
