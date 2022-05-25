@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 
 const SidePanel = () => {
   return (
@@ -8,4 +9,11 @@ const SidePanel = () => {
   );
 };
 
-export default SidePanel;
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth,
+    profile: state.firebase.profile,
+  };
+};
+
+export default connect(mapStateToProps)(SidePanel);
