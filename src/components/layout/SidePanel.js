@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { signOut } from "../../store/actions/authActions";
 import { Avatar } from "@mui/material";
@@ -8,7 +8,7 @@ import { StyledChip, SecondaryButton } from "./SignedInLinks";
 
 const SidePanel = (props) => {
   const { auth, profile } = props;
-  console.log(auth, profile);
+  console.log(props);
 
   const [dropOpen, setDropOpen] = useState(false);
 
@@ -19,6 +19,9 @@ const SidePanel = (props) => {
           <li className="tab">
             <NavLink to="/">
               <StyledChip
+                sx={{
+                  backgroundColor: "#fff"
+                }}
                 variant="outlined"
                 clickable
                 avatar={
@@ -43,12 +46,15 @@ const SidePanel = (props) => {
             </NavLink>
           </li>
           <li className="tab">
-            <SecondaryButton variant="outlined" style={{ width: "11em" }}>
+            <SecondaryButton variant="outlined" style={{ width: "11em", backgroundColor: "#fff"  }}>
               <a onClick={props.signOut}>Log Out</a>
             </SecondaryButton>
           </li>
         </ul>
-        <h2>All Users</h2>
+        <div>
+          <h2>All Users</h2>
+          <hr/>
+        </div>
       </div>
     </nav>
   );
@@ -58,6 +64,7 @@ const mapStateToProps = (state) => {
   return {
     auth: state.firebase.auth,
     profile: state.firebase.profile,
+    users: state.firebase
   };
 };
 const mapDispatchToProps = (dispatch) => {
@@ -65,6 +72,5 @@ const mapDispatchToProps = (dispatch) => {
     signOut: () => dispatch(signOut()),
   };
 };
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(SidePanel);
