@@ -6,7 +6,11 @@ import { Avatar, Button, Chip } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { BiMessageSquareAdd } from "react-icons/bi";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import { RiDashboardFill, RiMessage2Fill, RiSettings3Fill } from "react-icons/ri";
+import {
+  RiDashboardFill,
+  RiMessage2Fill,
+  RiSettings3Fill,
+} from "react-icons/ri";
 import { FaUsers } from "react-icons/fa";
 import { BsKanbanFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
@@ -83,7 +87,6 @@ export const StyledChip = styled(Chip)({
 });
 
 function SignedInLinks(props) {
-  
   const [dropOpen, setDropOpen] = useState(false);
 
   return (
@@ -98,54 +101,66 @@ function SignedInLinks(props) {
         <div className="sidebar-column">
           <ul className="right">
             <li>
-              <PrimaryButton
-                variant="contained"
-                startIcon={<BiMessageSquareAdd />}
-              >
-                <NavLink to="/create">New Project</NavLink>
-              </PrimaryButton>
+              <NavLink to="/create">
+                <PrimaryButton
+                  variant="contained"
+                  startIcon={<BiMessageSquareAdd />}
+                >
+                  New Project
+                </PrimaryButton>
+              </NavLink>
             </li>
           </ul>
           <ul className="right">
             <li className="tab">
-              <ExpandButton
-                sx={{ width: "11em", justifyContent: "flex-start" }}
-                startIcon={<RiDashboardFill />}
-              >
-                <NavLink to="/">Dashboard</NavLink>
-              </ExpandButton>
+              <NavLink to="/">
+                <ExpandButton
+                  sx={{ width: "11em", justifyContent: "flex-start" }}
+                  startIcon={<RiDashboardFill />}
+                >
+                  Dashboard
+                </ExpandButton>
+              </NavLink>
             </li>
             <li className="tab">
-              <ExpandButton
-                sx={{ width: "11em", justifyContent: "flex-start" }}
-                startIcon={<BsKanbanFill />}
-              >
-                <NavLink to="/kanbanBoard">Kanban</NavLink>
-              </ExpandButton>
+              <NavLink to="/kanbanBoard">
+                <ExpandButton
+                  sx={{ width: "11em", justifyContent: "flex-start" }}
+                  startIcon={<BsKanbanFill />}
+                >
+                  Kanban
+                </ExpandButton>
+              </NavLink>
             </li>
             <li className="tab">
-              <ExpandButton
-                sx={{ width: "11em", justifyContent: "flex-start" }}
-                startIcon={<FaUsers />}
-              >
-                <NavLink to="/teams">Teams</NavLink>
-              </ExpandButton>
+              <NavLink to="/teams">
+                <ExpandButton
+                  sx={{ width: "11em", justifyContent: "flex-start" }}
+                  startIcon={<FaUsers />}
+                >
+                  Teams
+                </ExpandButton>
+              </NavLink>
             </li>
             <li className="tab">
-              <ExpandButton
-                sx={{ width: "11em", justifyContent: "flex-start" }}
-                startIcon={<RiMessage2Fill />}
-              >
-                <NavLink to="/chat">Messages</NavLink>
-              </ExpandButton>
+              <NavLink to="/chat">
+                <ExpandButton
+                  sx={{ width: "11em", justifyContent: "flex-start" }}
+                  startIcon={<RiMessage2Fill />}
+                >
+                  Messages
+                </ExpandButton>
+              </NavLink>
             </li>
             <li className="tab">
-              <ExpandButton
-                sx={{ width: "11em", justifyContent: "flex-start" }}
-                startIcon={<RiSettings3Fill />}
-              >
-                <NavLink to="/settings">Settings</NavLink>
-              </ExpandButton>
+              <NavLink to="/settings">
+                <ExpandButton
+                  sx={{ width: "11em", justifyContent: "flex-start" }}
+                  startIcon={<RiSettings3Fill />}
+                >
+                  Settings
+                </ExpandButton>
+              </NavLink>
             </li>
           </ul>
           <ul className="right">
