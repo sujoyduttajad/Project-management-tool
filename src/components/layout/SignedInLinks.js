@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { signOut } from "../../store/actions/authActions";
-import { Avatar, Button, Chip } from "@mui/material";
+import { Button, Chip } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { BiMessageSquareAdd } from "react-icons/bi";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import {
   RiDashboardFill,
   RiMessage2Fill,
@@ -13,7 +12,6 @@ import {
 } from "react-icons/ri";
 import { FaUsers } from "react-icons/fa";
 import { BsKanbanFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
 import collab from "../../images/collab.svg";
 import collabP from "../../images/collab-logo.svg";
 import { ExpandButton } from "../projects/ProjectSummary";
@@ -87,7 +85,7 @@ export const StyledChip = styled(Chip)({
 });
 
 function SignedInLinks(props) {
-  const [dropOpen, setDropOpen] = useState(false);
+  
 
   return (
     <nav className="nav-wrapper">
@@ -163,39 +161,7 @@ function SignedInLinks(props) {
               </NavLink>
             </li>
           </ul>
-          <ul className="right">
-            <li className="tab">
-              <NavLink to="/">
-                <StyledChip
-                  variant="outlined"
-                  clickable
-                  avatar={
-                    <Avatar
-                      variant="circular"
-                      sx={{
-                        bgcolor: "#131E3F",
-                        lineHeight: 0,
-                      }}
-                    >
-                      {props.profile.initials}
-                    </Avatar>
-                  }
-                  label={
-                    <h4 className="avatar-h4">Hi! {props.profile.firstName}</h4>
-                  }
-                  onDelete={() => setDropOpen(!dropOpen)}
-                  deleteIcon={
-                    <MdOutlineKeyboardArrowDown style={{ color: "#131E3F" }} />
-                  }
-                />
-              </NavLink>
-            </li>
-            <li className="tab">
-              <SecondaryButton variant="outlined" style={{ width: "11em" }}>
-                <a onClick={props.signOut}>Log Out</a>
-              </SecondaryButton>
-            </li>
-          </ul>
+  
         </div>
       </div>
     </nav>
