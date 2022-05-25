@@ -9,7 +9,7 @@ import { CardContent } from "@mui/material";
 import { CustomCard, CustomTypo } from "./ProjectSummary";
 
 function ProjectDetails(props) {
-  console.log(props);
+  
   const { project, auth } = props;
   if (!auth.uid) return <Redirect to="/signin" />;
 
