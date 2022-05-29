@@ -8,7 +8,6 @@ import { StyledChip, SecondaryButton } from "./SignedInLinks";
 
 const SidePanel = (props) => {
   const { auth, profile } = props;
-  console.log(props);
 
   const [dropOpen, setDropOpen] = useState(false);
 
