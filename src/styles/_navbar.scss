@@ -8,7 +8,7 @@
   }
 
 .nav-wrapper {
-    @include flex(column, flex-start, flex-start);
+    @include flex(column, space-between, flex-start);
     max-width: 12em;
     width: 100%;
     height: 100vh;
