@@ -12,10 +12,8 @@ class Dashboard extends Component {
     if (!auth.uid) return <Redirect to="/signin" />;
 
     let projectList;
-    let userList;
     if (projects) {
       projectList = projects.map(project => project.title);
-      userList = new Set(projects.map(user => user.authorFirstName))
     }
 
       // console.log(userList)
@@ -27,7 +25,6 @@ class Dashboard extends Component {
           <ProjectList 
             projects={projects} 
             projectList={projectList}
-            userList={userList} 
           />
         </div>
         <div className="">
