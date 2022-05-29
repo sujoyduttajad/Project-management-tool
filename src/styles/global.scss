@@ -47,6 +47,12 @@ li {
   box-shadow: -1px 3px 8px 0px rgba(56, 56, 56, 0.91);
 }
 
+hr {
+  width: 100%;
+  border-color: #eee;
+}
+
+// Material -UI overidden styles
 .css-blneid-MuiAutocomplete-root .MuiOutlinedInput-root {
   padding: 0 !important;
   padding-left: 0.5em !important;
