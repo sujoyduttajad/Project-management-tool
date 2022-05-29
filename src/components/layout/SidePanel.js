@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
+import { firestoreConnect } from "react-redux-firebase";
+import { compose } from "redux";
+import { Redirect } from "react-router-dom";
 import { signOut } from "../../store/actions/authActions";
 import { Avatar } from "@mui/material";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
@@ -7,9 +10,19 @@ import { NavLink } from "react-router-dom";
 import { StyledChip, SecondaryButton } from "./SignedInLinks";
 
 const SidePanel = (props) => {
-  const { auth, profile } = props;
-
   const [dropOpen, setDropOpen] = useState(false);
+
+  const { projects, auth, profile } = props;
+  if (!auth.uid) return <Redirect to="/signin" />;
+
+  let userList;
+  if (projects) {
+    userList = new Set(projects.map((user) => user.authorFirstName));
+  }
+
+  console.log(userList);
+
+  
 
   return (
     <nav className="panel-wrapper">
@@ -31,7 +44,7 @@ const SidePanel = (props) => {
                       lineHeight: 0,
                     }}
                   >
-                    {props.profile.initials}
+                    {profile.initials}
                   </Avatar>
                 }
                 label={
@@ -66,7 +79,7 @@ const mapStateToProps = (state) => {
   return {
     auth: state.firebase.auth,
     profile: state.firebase.profile,
-    users: state.firebase,
+    projects: state.firestore.ordered.projects,
   };
 };
 const mapDispatchToProps = (dispatch) => {
@@ -75,4 +88,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SidePanel);
+export default compose(
+  connect(mapStateToProps, mapDispatchToProps),
+  firestoreConnect([{ collection: "projects", orderBy: ["createdAt", "desc"] }])
+)(SidePanel);
