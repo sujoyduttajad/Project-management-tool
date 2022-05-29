@@ -20,4 +20,18 @@
     z-index: 100;
     background-color: variables.$secondaryColor;
     // box-shadow: -5px 20px 18px rgba(0, 0, 0, 0.5);
+
+    .container {
+      width: 100%;
+    }
+}
+
+.users-list-container {
+  width: 100%;
+  hr {
+    width: 100%;
+    background-color: #CCCCCC;
+    border: none;
+    height: 1px;
+  }
 }
