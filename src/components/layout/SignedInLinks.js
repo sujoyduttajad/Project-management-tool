@@ -10,6 +10,8 @@ import {
   RiMessage2Fill,
   RiSettings3Fill,
 } from "react-icons/ri";
+import { BsQuestionCircle } from "react-icons/bs"
+import { IoAnalyticsSharp } from "react-icons/io5"
 import { FaUsers } from "react-icons/fa";
 import { BsKanbanFill } from "react-icons/bs";
 import collab from "../../images/collab.svg";
@@ -85,8 +87,6 @@ export const StyledChip = styled(Chip)({
 });
 
 function SignedInLinks(props) {
-  
-
   return (
     <nav className="nav-wrapper">
       <div className="container">
@@ -151,18 +151,41 @@ function SignedInLinks(props) {
               </NavLink>
             </li>
             <li className="tab">
-              <NavLink to="/settings">
+              <NavLink to="/analytics">
                 <ExpandButton
                   sx={{ width: "11em", justifyContent: "flex-start" }}
-                  startIcon={<RiSettings3Fill />}
+                  startIcon={<IoAnalyticsSharp />}
                 >
-                  Settings
+                  Analytics
                 </ExpandButton>
               </NavLink>
             </li>
           </ul>
-  
         </div>
+      </div>
+      <div className="container">
+        <ul className="right">
+          <li className="tab">
+            <NavLink to="/settings">
+              <ExpandButton
+                sx={{ width: "11em", justifyContent: "flex-start" }}
+                startIcon={<RiSettings3Fill />}
+              >
+                Settings
+              </ExpandButton>
+            </NavLink>
+          </li>
+          <li className="tab">
+            <NavLink to="/help">
+              <ExpandButton
+                sx={{ width: "11em", justifyContent: "flex-start" }}
+                startIcon={<BsQuestionCircle />}
+              >
+                Help
+              </ExpandButton>
+            </NavLink>
+          </li>
+        </ul>
       </div>
     </nav>
   );
