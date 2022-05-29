@@ -18,7 +18,6 @@ export const CustomSearch = styled(TextField)({
 
 function ProjectList({ projects, projectList }) {
 
-  console.log(projects, projectList)
   
   return (
     <section className="project-list-section">
