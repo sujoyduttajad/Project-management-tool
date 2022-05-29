@@ -41,9 +41,10 @@ export const ExpandButton = styled(Button)({
 });
 
 function ProjectSummary({ project }) {
+
+
   return (
     <div className="card-layout">
-
       <CustomCard>
         <CardContent>
           <CustomTypo
