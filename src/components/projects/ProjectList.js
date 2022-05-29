@@ -11,8 +11,8 @@ export const CustomSearch = styled(TextField)({
   width: "100%",
   fontSize: "1em",
   
-  "&:focus": {
-    border: "1px solid green",
+  "&:active": {
+    outline: "1px solid #131E3F",
   },
 });
 
@@ -24,6 +24,8 @@ function ProjectList({ projects, projectList }) {
       <div className="serach-container">
         <Autocomplete
           disablePortal
+          autoComplete
+          autoHighlight
           id="combo-box-demo"
           options={projectList}
           sx={{
