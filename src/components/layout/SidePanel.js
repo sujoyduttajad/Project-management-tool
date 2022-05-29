@@ -54,7 +54,7 @@ const SidePanel = (props) => {
             </SecondaryButton>
           </li>
         </ul>
-        <div>
+        <div className="users-list-container">
           <h2>All Users</h2>
           <hr />
         </div>
